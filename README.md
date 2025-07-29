@@ -1,2 +1,0 @@
-# Schrimsn
-My first repo
