@@ -339,7 +339,7 @@
 <header>
   <h1>Weather Dashboard</h1>
   <div class="search-row">
-    <input id="api-key-input" type="password" placeholder="OpenWeatherMap API key" autocomplete="off">
+    <input id="api-key-input" type="hidden">
     <input id="search-input" type="text" placeholder="City, zip, or 'lat,lon'" autocomplete="off">
     <button id="locate-btn" title="Use my location">📍</button>
     <button id="search-btn">Search</button>
@@ -350,7 +350,7 @@
 <main>
   <div id="empty-state">
     <div class="big">🌤</div>
-    <p>Enter your OpenWeatherMap API key and a location to get started.</p>
+    <p>Enter your location to get started.</p>
   </div>
 
   <div id="loading">
@@ -458,7 +458,7 @@ let charts = {};
 const $ = id => document.getElementById(id);
 
 // ── Persist API key ────────────────────────────────────────────────────────
-$('api-key-input').value = localStorage.getItem('owm_key') || '';
+$('api-key-input').value = localStorage.getItem('owm_key') || '56c83c98bfa166bc4267a1882ae4f72b';
 
 // ── Unit toggle ────────────────────────────────────────────────────────────
 $('unit-toggle').addEventListener('click', () => {
